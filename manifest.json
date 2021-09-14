@@ -1,0 +1,27 @@
+{
+  "name": "demo extension",
+  "version": "1.0.0",
+  "description": "my first chrome extension",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["bookmarks"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "serious-icon.png",
+    "48": "serious-icon.png",
+    "128": "serious-icon.png"
+  },
+  "browser_action": {
+    "default_title": "Created by Senpai013045",
+    "default_popup": "popup.html"
+  }
+}
